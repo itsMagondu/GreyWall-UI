@@ -11,9 +11,6 @@
     legend {
 	text-align : center;
 	}
-    .err {
-	color: red;
-	}
  </style>
 
 <div class="container">

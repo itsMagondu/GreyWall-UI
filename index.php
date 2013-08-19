@@ -7,11 +7,6 @@
 	unset($_SESSION['SESS_FIRST_NAME']);
 	//unset($_SESSION['SESS_LAST_NAME']);
 ?>
- <style type="text/css">
-	.err {
-	color: red;
-	}
- </style>
     <div class="container">
 	
       <form class="form-signin" _lpchecked="1" action="login_exec.php" method="post">

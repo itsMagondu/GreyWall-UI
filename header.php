@@ -125,6 +125,9 @@
         margin-bottom: 15px;
         padding: 7px 9px;
       }
+      .err {
+	color: red;
+	}
     </style>
     <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
