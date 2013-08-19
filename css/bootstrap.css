@@ -8,6 +8,23 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+@font-face { 
+  font-family: Colaborate-Thin; 
+    src: url('../font/ColabThi.otf'); 
+    src: local("Colaborate-Thin"), url('../font/ColabThi.otf'); 
+} 
+
+@font-face { 
+  font-family: Colaborate-Regular; 
+    src: url('../font/ColabReg.otf'); 
+    src: local("Colaborate-Regular"), url('../font/ColabReg.otf'); 
+} 
+
+@font-face { 
+  font-family: Caviar Dreams; 
+    src: url('../font/CaviarDreams.ttf'); 
+    src: local("Caviar Dreams"), url('../font/CaviarDreams.ttf'); 
+} 
 .clearfix {
   *zoom: 1;
 }
