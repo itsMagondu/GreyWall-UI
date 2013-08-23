@@ -152,30 +152,7 @@
        <!--<div class="muted"><img src="./img/anglican.gif" alt="Anglican Logo"><span style="padding: 0 10px">&nbsp;</span><b>St. Peter's Kirangari Church</b></div>-->
 	<div class="muted"><img src="./img/RockBaseHeader.jpg" alt="Header"></div>
 
-<div class="row">
-  <div class="span12"style = "text-align: right">
-    <form method="get" action="/" class="form-inline" >
-      <input name="loc" class="span3" type="text"  placeholder="Enter name">
-      <button type="submit" class="btn btn-primary"> <i class="icon-search icon-white"></i></button>
-    </form>
-  </div>
-</div>
-
 	<!--<form class="navbar-search">
            <input type="text" class="search-query span3" placeholder="Search">
           </form>-->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <li class="active"><a href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">Home</a></li>
-                <li><a href="registration.php">Registration</a></li>
-                <li><a href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">Sacraments</a></li>
-                <li><a href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">Leadership</a></li>
-                <li><a href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">About Us</a></li>
-                <li><a href="http://twitter.github.io/bootstrap/examples/justified-nav.html#">Settings</a></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- /.navbar -->
       </div>

@@ -52,7 +52,7 @@
 			session_regenerate_id();
 			$user = mysql_fetch_assoc($result);
 			$_SESSION['SESS_USERNAME'] = $user['username'];
-			$_SESSION['SESS_FIRST_NAME'] = $member['password'];
+			$_SESSION['SESS_FIRST_NAME'] = $user['password'];
 			//$_SESSION['SESS_LAST_NAME'] = $member['password'];
 			session_write_close();
 			header("location: home.php");

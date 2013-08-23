@@ -1,0 +1,31 @@
+<!--the code below is used to display all user input-->
+		<?php include 'get_memberdata.php'; ?>
+		 //<?php
+		   if(isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+			echo '<ul class="err">';
+			foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+				echo '<li>',$msg,'</li>'; 
+				//echo $msg; 
+				}
+			echo '</ul>';
+			unset($_SESSION['ERRMSG_ARR']);
+			}
+		   elseif (isset($_SESSION['RESULT_ARR']) && is_array($_SESSION['RESULT_ARR']) ) {
+			foreach($_SESSION['RESULT_ARR'] as $msg) {
+				$na = array($msg[4],$msg[3],$msg[2]);
+				$name = implode(" ", $na);
+				//echo '<li>',$msg,'</li>'; 
+			   echo '<tr>';
+			   echo  '<th>',$msg[0],'.</th>';
+        		   echo	 '<td>',$name,'</td>';
+		           echo	 '<td>',$msg[5],'</td>';
+			   echo	 '<td>',$msg[12],'</td>';
+			   echo  '<td><span class="label label-success">',$msg[10],'</span>';
+			   echo  '</td>';                                     
+			   echo '</tr>';
+				}
+			unset($_SESSION['RESULT_ARR']);
+			}
+		//?>
+	
+    <tr>-->

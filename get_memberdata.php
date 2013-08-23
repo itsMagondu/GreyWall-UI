@@ -2,69 +2,38 @@
 	//Start session
 	session_start();
  
-	//Include database connection details
-	require_once('connection.php');
- 
 	//Array to store validation errors
 	$errmsg_arr = array();
  
 	//Validation error flag
 	$errflag = false;
+	
+	//Array to pass results
+	$result_arr = array();
  
-	//Function to sanitize values received from the form. Prevents SQL injection
-	function clean($str) {
-		$str = @trim($str);
-		if(get_magic_quotes_gpc()) {
-			$str = stripslashes($str);
-		}
-		return mysql_real_escape_string($str);
-	}
- 
-	//Sanitize the POST values
-	$username = clean($_POST['username']);
-	$password = clean($_POST['password']);
- 
-	//Input Validations
-	if($username == '') {
-		$errmsg_arr[] = 'Username missing';
-		$errflag = true;
-	}
-	if($password == '') {
-		$errmsg_arr[] = 'Password missing';
-		$errflag = true;
-	}
- 
-	//If there are input validations, redirect back to the login form
-	if($errflag) {
-		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
-		session_write_close();
-		header("location: index.php");
-		exit();
-	}
+	//Include database connection details
+	require_once('connection.php');
  
 	//Create query  || //'$password'";
-	$qry="SELECT * FROM users WHERE username='$username' AND password=md5('$password')"; 
+	$qry="SELECT * FROM member_details"; 
 	$result=mysql_query($qry);
  
 	//Check whether the query was successful or not
-	if($result) {		if(mysql_num_rows($result) > 0) {
-			//Login Successful
-			session_regenerate_id();
-			$user = mysql_fetch_assoc($result);
-			$_SESSION['SESS_USERNAME'] = $user['username'];
-			$_SESSION['SESS_FIRST_NAME'] = $member['password'];
-			//$_SESSION['SESS_LAST_NAME'] = $member['password'];
-			session_write_close();
-			header("location: home.php");
+	if($result) {		
+		if(mysql_num_rows($result) > 0) {
+			while($data = mysql_fetch_row($result)){
+				$result_arr[] = $data}
+			$_SESSION['RESULT_ARR'] = $result_arr;
+			header("location: registration.php");
 			exit();
-		}else {
+		}
+		else {
 			//Login failed
-			$errmsg_arr[] = 'Username and password not found';
+			$errmsg_arr[] = 'No members have been registered yet';
 			$errflag = true;
 			if($errflag) {
 				$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
-				session_write_close();
-				header("location: index.php");
+				header("location: registration.php");
 				exit();
 			}
 		}

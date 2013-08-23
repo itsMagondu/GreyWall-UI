@@ -1,6 +1,5 @@
 <?php require_once('auth.php');?>
 <?php include 'header.php'; ?>
-
 <style type="text/css">
     .form-horizontal .control-label {
 	width: 100px;
@@ -155,7 +154,7 @@
       </tr>
   </thead>   
   <tbody>
-    <tr>
+  <tr>
 	<th>1.</th>
         <td>Donna R. Folse</td>
         <td>2012/05/06</td>

@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'header_logedout.php'; ?>
 <?php
 	//Start session
 	session_start();	
